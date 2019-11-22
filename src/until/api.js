@@ -9,5 +9,5 @@ export const userRegist = (params)=>{
 }
 // 1. 获取商品列表
 export const getproducts = (params)=>{
-    return API.GET('/api/v1/admin/products',params)
+    return API.HEADPOST('/api/v1/admin/products',params)
 }

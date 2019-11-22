@@ -1,0 +1,23 @@
+{
+  "name": "east-dragon-shop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "umi-plugin-react": "^1.14.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wxh1018/East-Dragon-shop.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wxh1018/East-Dragon-shop/issues"
+  },
+  "homepage": "https://github.com/wxh1018/East-Dragon-shop#readme"
+}

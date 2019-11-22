@@ -2,9 +2,25 @@ import axios from 'axios'
 
 let baseurl = 'http://api.cat-shop.penkuoer.com'
 // let baseurl =  'http://jx.xuzhixiang.top/ap/api'
+const token = localStorage.getItem('token')
 export const GET = (url,params)=>{
     return axios.get(`${baseurl}${url}`,{params:params}).then((data)=>data) 
 }
 export const POST = (url,params)=>{
     return axios.post(`${baseurl}${url}`,params).then((data)=>data)
+}
+export const HEADPOST = (url,params)=>{
+    return axios.post(`${baseurl}${url}`,params,{headers:{
+        authorization:'Bearer' + token
+    }}).then((data)=>data)
+}
+export const DELETE = (url,params)=>{
+    return axios.post(`${baseurl}${url}`,params,{headers:{
+        authorization:'Bearer' + token
+    }})
+}
+export const PUT = (url,params)=>{
+    return axios.post(`${baseurl}${url}`,params,{headers:{
+        authorization:'Bearer' + token
+    }}).then((data)=>data)
 }

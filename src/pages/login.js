@@ -12,11 +12,6 @@ function Login(props) {
       密码：<input type='password' ref={(pwd) => password = pwd} />
       <p></p>
       <button onClick={() => props.dispatch({
-        type:'login/tologin',
-        payload:{
-          userName:value.value,
-          password:password.value
-        },
         type: 'login/tologin',
         payload: {
           userName: value.value,
