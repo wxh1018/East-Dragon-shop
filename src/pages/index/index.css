@@ -1,0 +1,21 @@
+
+#components-layout-demo-fixed-sider .logo {
+    height: 32px;
+    background:red;
+    margin: 16px;
+  }
+  .ant-layout-sider{
+    background:rgba(240,242,245)!important ;
+  }
+  .ant-layout-footer{
+    padding:10px!important
+  }
+  .ant-layout-sider::-webkit-scrollbar {
+    display: none;
+  }
+  .h1{
+    font-size: 32px;
+    position: absolute;
+    left: 220px;
+    top: 6px;
+  }
