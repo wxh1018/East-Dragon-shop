@@ -38,7 +38,8 @@ input{
     width: 80%;
     border-radius: 5px;
 }
-button{
+a, button{
+    display: block;
     height: 50px;
     width: 80%;
     border-radius: 10px;
@@ -47,4 +48,7 @@ button{
     background: skyblue;
     color:white!important;
     font-size: 18px!important;
+}
+button{
+    width:100%
 }
