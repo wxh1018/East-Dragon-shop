@@ -18,6 +18,11 @@ const routes = [
         component: require('../login.js').default,
       },
       {
+        path: '/models/getproduct',
+        exact: true,
+        component: require('../models/getproduct.js').default,
+      },
+      {
         path: '/models/home',
         exact: true,
         component: require('../models/home.js').default,
