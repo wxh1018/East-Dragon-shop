@@ -22,8 +22,7 @@ function Login(props) {
                         userName: value.value,
                         password: password.value
                     }
-                })}>登录</button>
-                {props.token}
+                })}><Link style={{pointerEvents:'none'}} to="/index/home">登录</Link></button>
             </div>
         </div>
     );

@@ -66,7 +66,6 @@ function home(props) {
           })
         }
       </ul>
-
     </div>
 
   );

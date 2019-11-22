@@ -12,6 +12,7 @@ export default{
         change(state,{payload}){
             return {...state,...payload}
         }
+        
     },
     effects:{
         *tologin(payload,{call,put}){
@@ -24,7 +25,7 @@ export default{
                     token:result.data.token
                 }
             })
-            // location.href = '/home'
+            localStorage.setItem('token',result.data.token)
         }
     }
 }
