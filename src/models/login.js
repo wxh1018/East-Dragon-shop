@@ -15,17 +15,16 @@ export default{
     },
     effects:{
         *tologin(payload,{call,put}){
-            console.log(1);
             console.log(payload.payload);
-            const result = yield call(api.loginapi,payload.payload)
+            const result = yield call(api.adminLogin,payload.payload)
             console.log(result);
             yield put({
                 type:'change',
                 payload:{
-                    token:'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiO…I4NH0.EV55YCa7wY2doyAj7UBAsLQVyZ6AZ0Im3GPHrmWl5aU'
+                    token:result.data.token
                 }
             })
-            location.href = '/home'
+            // location.href = '/home'
         }
     }
 }
