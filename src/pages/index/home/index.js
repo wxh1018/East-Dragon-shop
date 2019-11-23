@@ -1,13 +1,19 @@
 
 import Link from 'umi/link';
-// import Login from './login/_layout'
 import { connect } from 'dva';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import style from './home.css'
+import { BrowserRouter as Router, Route, Switch, useState } from 'react-router-dom';
+import {useEffect} from 'react'
+import style from './index.css'
 import { Icon } from 'antd';
 import { Item } from 'rc-menu';
 
-function home(props) {
+function Index(props) {
+  useEffect(() => {
+     props.dispatch({
+      type: 'home/getuser',
+    }),
+    props
+  },[])
   return (
     <div className={style.normal}>
       <ul className={style.head}>
@@ -16,7 +22,7 @@ function home(props) {
             <Icon type="smile" theme="outlined" style={{ fontSize: 50 }} />
           </div>
           <div>
-            <span>123 </span>
+            <span>{props.list1.num} </span>
             <span>店铺会员</span>
           </div>
         </li>
@@ -48,8 +54,34 @@ function home(props) {
           </div>
         </li>
       </ul>
-      <p>{props.name}</p>
-      <ul className={style.head}>
+      {
+        props.a.map((item) => {
+          return (
+            <div key={item.type}>
+              <p>{item.name}</p>
+            </div>
+          )
+        })
+      }
+      <button onClick={() => props.dispatch({
+        type: 'home/edit'
+      })}>更新</button>
+      {
+        props.grid1.map((item) => {
+          return (
+            <ul key={item.type} className={style.productMessage}>
+              <li>{item.title}</li>
+              <li>{item.first}</li>
+              <li></li>
+              <li>{item.second}</li>
+              <li></li>
+              <li>{item.third}</li>
+              <li></li>
+            </ul>
+          )
+        })
+      }
+      {/* <ul className={style.head}>
         {
           props.list.map((item) => {
             return (
@@ -65,10 +97,10 @@ function home(props) {
             )
           })
         }
-      </ul>
+      </ul> */}
     </div>
 
   );
 }
 
-export default connect(state => state.home)(home)
+export default connect(state => state.home)(Index)

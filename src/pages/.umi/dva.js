@@ -20,8 +20,7 @@ export function _onCreate() {
     app.use(plugin);
   });
   
-  app.model({ namespace: 'base', ...(require('C:/Users/wxh/Desktop/East Dragon shop/shop/East-Dragon-shop/src/models/base.js').default) });
-app.model({ namespace: 'login', ...(require('C:/Users/wxh/Desktop/East Dragon shop/shop/East-Dragon-shop/src/models/login.js').default) });
+  app.model({ namespace: 'login', ...(require('C:/Users/wxh/Desktop/East Dragon shop/shop/East-Dragon-shop/src/models/login.js').default) });
 app.model({ namespace: 'getproduct', ...(require('C:/Users/wxh/Desktop/East Dragon shop/shop/East-Dragon-shop/src/pages/models/getproduct.js').default) });
 app.model({ namespace: 'home', ...(require('C:/Users/wxh/Desktop/East Dragon shop/shop/East-Dragon-shop/src/pages/models/home.js').default) });
   return app;

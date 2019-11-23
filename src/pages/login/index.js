@@ -21,15 +21,15 @@ function Login(props) {
                     <input type="text" id='name' defaultValue='admin'/></label><br/>
                 <label htmlFor="">
                     <span>密码</span>
-                    <input type='password' id='pwd' value="admin" />
+                    <input type='password' id='pwd'defaultValue='admin' />
                 </label><br/>
-                <Link to="/index/home"><button onClick={() => props.dispatch({
+                <Link className={style.login} to="/index/home" onClick={() => props.dispatch({
                     type: 'login/tologin',
                     payload: {
                         userName: 'admin',
                         password: 'admin'
                     }
-                })}>登录</button></Link>
+                })}>登录</Link>
             </div>
         </div>
     );

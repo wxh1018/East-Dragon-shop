@@ -12,7 +12,7 @@ export const adminInfo=(params)=>{
 
 //用户管理
 export const userList=(params)=>{
-    return API.GET('/api/v1/admin/users',params)
+    return API.HEADGET('/api/v1/admin/users',params)
 }
 
 export const addUser=(params)=>{
@@ -44,7 +44,7 @@ export const userAddress=(params)=>{
 
 //商品管理
 export const proList=(params)=>{
-    return API.HEADGET('/api/v1/admin/products')
+    return API.HEADGET('/api/v1/admin/products',params)
 }
 
 export const addPro=(params)=>{

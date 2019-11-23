@@ -5,14 +5,14 @@ export default{
     state:{
         userName:'',
         password:'',
-        token:''
-
+        token:'',
+        defval:'admin',
+        grid1:{title:'1',first:'代发货订单',second:'带结算订单',third:"已成交订单"},
     },
     reducers:{
         change(state,{payload}){
             return {...state,...payload}
         }
-        
     },
     effects:{
         *tologin(payload,{call,put}){

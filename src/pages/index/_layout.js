@@ -8,8 +8,13 @@ import Login from '../login'
 
 
 function index(props) {
+  (function (param) { 
+    //会员数量
+    props.dispatch({
+      type:'home/getuser',
+    });
+ })()
   const { Header, Content, SubMenu, Footer, Sider } = Layout;
-  console.log(props.route);
   // props.route.path == '/'?location.href = '/index/home':1
 
   return (
@@ -31,7 +36,11 @@ function index(props) {
           >
             <Menu theme="" mode="inline" defaultSelectedKeys={['1']}>
               <Menu.Item key="1">
-                <Link to="/index/home">
+                <Link to="/index/home"
+                 onClick={()=>props.dispatch({
+                  type:'home/getuser',
+                })}
+                >
                   <Icon type="user" />
                   <span className="nav-text">系统首页</span>
                 </Link>
@@ -42,7 +51,11 @@ function index(props) {
               </Menu.Item>
               <Menu.Item key="3">
                 <Icon type="upload" />
-                <span className="nav-text">商品管理</span>
+                <span className="nav-text"
+                onClick={()=>props.dispatch({
+                  type:'getproduct/getpro'
+                })}
+                >商品管理</span>
               </Menu.Item>
               <Menu.Item key="4">
                 <Icon type="bar-chart" />
@@ -114,4 +127,4 @@ function index(props) {
   );
 }
 
-export default connect(state => state.base)(index)
+export default connect(state => state.login)(index)

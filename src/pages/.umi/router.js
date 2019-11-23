@@ -18,11 +18,6 @@ const routes = [
         component: require('../login/index.js').default,
       },
       {
-        path: '/login',
-        exact: true,
-        component: require('../login.js').default,
-      },
-      {
         path: '/models/getproduct',
         exact: true,
         component: require('../models/getproduct.js').default,
@@ -65,7 +60,7 @@ const routes = [
           {
             path: '/index/home',
             exact: true,
-            component: require('../index/home.js').default,
+            component: require('../index/home/index.js').default,
           },
           {
             path: '/',

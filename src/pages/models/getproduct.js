@@ -3,7 +3,7 @@ import * as api from '../../until/api'
 export default{
     namespace:'getproduct',
     state:{
-        list:'123'
+        list:''//商品列表
     },
     reducers:{
         change(state,{payload}){
@@ -11,10 +11,15 @@ export default{
         }
     },
     effects:{
-        *pro(payload,{call,put}){
-            console.log(payload.payload);
-            const result = yield call(api.getproducts,payload.payload)
-            console.log(result);
+        *getpro(payload,{call,put}){
+            const result = yield call(api.proList)
+            console.log(result.data.products);
+            yield put({
+                type:'change',
+                payload:{
+                    list:result.data.products
+                }
+            })
         }
     }
 }
