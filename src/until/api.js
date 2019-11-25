@@ -48,7 +48,7 @@ export const proList=(params)=>{
 }
 
 export const addPro=(params)=>{
-    return API.HEADPOST('/api/v1/admin/products')
+    return API.HEADPOST('/api/v1/admin/products',params)
 }
 
 export const updatePro=(params)=>{
@@ -56,7 +56,7 @@ export const updatePro=(params)=>{
 }
 
 export const delPro=(params)=>{
-    return API.DELETE('/api/v1/admin/products/:id')
+    return API.DELETE('/api/v1/admin/products/',params)
 }
 
 export const idPro=(params)=>{

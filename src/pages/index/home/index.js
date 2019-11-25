@@ -11,8 +11,7 @@ function Index(props) {
   useEffect(() => {
      props.dispatch({
       type: 'home/getuser',
-    }),
-    props
+    })
   },[])
   return (
     <div className={style.normal}>

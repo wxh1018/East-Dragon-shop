@@ -33,7 +33,7 @@
 
 }
 
-input {
+.form input {
     outline: none;
     border: none;
     height: 40px;

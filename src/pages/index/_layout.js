@@ -8,12 +8,6 @@ import Login from '../login'
 
 
 function index(props) {
-  (function (param) { 
-    //会员数量
-    props.dispatch({
-      type:'home/getuser',
-    });
- })()
   const { Header, Content, SubMenu, Footer, Sider } = Layout;
   // props.route.path == '/'?location.href = '/index/home':1
 
@@ -49,17 +43,17 @@ function index(props) {
                 <Icon type="video-camera" />
                 <span className="nav-text">交易管理</span></Link>
               </Menu.Item>
-              <Menu.Item key="3">
+              <Menu.Item key="3"><Link to="/index/product">
                 <Icon type="upload" />
                 <span className="nav-text"
                 onClick={()=>props.dispatch({
-                  type:'getproduct/getpro'
+                  type:'index/product'
                 })}
-                >商品管理</span>
+                >商品管理</span></Link>
               </Menu.Item>
               <Menu.Item key="4">
                 <Icon type="bar-chart" />
-                <span className="nav-text">nav 4</span>
+                <span className="nav-text"> 4</span>
               </Menu.Item>
               <Menu.Item key="5">
                 <Icon type="cloud-o" />

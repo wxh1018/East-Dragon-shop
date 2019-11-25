@@ -42,12 +42,9 @@ export default{
             console.log(data.data);
         },
         *edit(payload,{put,call}){
-           let data =  yield call(api.addPro,  {
-            "quantity": 89,
-            "price": 6999,
-            "_id": "5c6e953a224d199e15f12b9d",
-            "name": "Apple iPhone X",
-            "descriptions": "Apple iPhone X (A1865) 64GB 银色 移动联通电信4G手机",})
+            let params = {name:123,descriptions:123,quantify:123,price:123,coverImg:123,productCategory:1}
+            //添加商品
+           let data =  yield call(api.addPro,params)
            console.log(data);
             yield put({
                 type:'push',

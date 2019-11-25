@@ -16,7 +16,6 @@ export default{
     },
     effects:{
         *tologin(payload,{call,put}){
-            console.log(payload.payload);
             const result = yield call(api.adminLogin,payload.payload)
             console.log(result);
             yield put({
