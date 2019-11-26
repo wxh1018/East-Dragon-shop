@@ -54,13 +54,17 @@ export const addPro=(params)=>{
 export const updatePro=(params)=>{
     return API.HEADPOST('/api/v1/admin/products/:id')
 }
+//根据id获取商品信息
+export const getTarget = (params)=>{
+    return API.HEADGET(`/api/v1/admin/products/${params.id}`)
+}
 
 export const delPro=(params)=>{
     return API.DELETE('/api/v1/admin/products/',params)
 }
 
-export const idPro=(params)=>{
-    return API.HEADGET('/api/v1/admin/products/:id')
+export const ediPro=(params)=>{
+    return API.PUT('/api/v1/admin/products/',params)
 }
 
 
@@ -72,7 +76,7 @@ export const sortList=(params)=>{
 }
 
 export const addSort=(params)=>{
-    return API.HEADPOST('/api/v1/admin/product_categories')
+    return API.HEADPOST('/api/v1/admin/product_categories',params)
 }
 
 //返回商品分类信息

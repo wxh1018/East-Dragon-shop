@@ -21,6 +21,7 @@ export function _onCreate() {
   });
   
   app.model({ namespace: 'login', ...(require('C:/Users/wxh/Desktop/East Dragon shop/shop/East-Dragon-shop/src/models/login.js').default) });
+app.model({ namespace: 'editpro', ...(require('C:/Users/wxh/Desktop/East Dragon shop/shop/East-Dragon-shop/src/pages/models/editpro.js').default) });
 app.model({ namespace: 'home', ...(require('C:/Users/wxh/Desktop/East Dragon shop/shop/East-Dragon-shop/src/pages/models/home.js').default) });
 app.model({ namespace: 'product', ...(require('C:/Users/wxh/Desktop/East Dragon shop/shop/East-Dragon-shop/src/pages/models/product.js').default) });
   return app;

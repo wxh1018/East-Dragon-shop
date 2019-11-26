@@ -3,7 +3,8 @@ import * as api from '../../until/api'
 export default {
     namespace: 'product',
     state: {
-        list: []//商品列表
+        list: [],//商品列表,
+        sortList:[]//分类
     },
     reducers: {
         change(state, { payload }) {
@@ -18,6 +19,7 @@ export default {
             let params = { per: result1.data.totalCount }
             const result = yield call(api.proList, params)
             let arr = result.data.products
+            console.log(result);
             arr.forEach((v, i) => {
                 v.key = i + 1
             });
@@ -31,17 +33,40 @@ export default {
         //添加商品
         *addpro(payload, { put, call, select, take }) {
             let data = yield call(api.addPro, payload.payload)
+            console.log(data);
         },
         //删除商品
         *delpro(payload,{put,call}){
            let result =  yield call(api.delPro,payload.payload.id)
             console.log(result);
+        },
+        //请求类别
+        *sortList(payload,{put,call}){
+            let data = yield call(api.sortList)
+            data.data.categories.unshift({_id:1,name:'请选择分类'})
+            yield put({
+                type:'change',
+                payload:{
+                    sortList: data.data.categories
+                }
+            })
+            console.log('请求类别');
+            yield put({
+                type:'editpro/change',
+                payload:{
+                    list: data.data.categories
+                }
+            })
+            
+        },
+
+        //新建分类
+
+        *newfenlei(payload,{call,put}){
+            console.log(payload.payload);
+            const data = yield call(api.addSort,payload.payload)
+            console.log(data);
+
         }
     }
 }
-// $ git --help                                      # 帮助命令
-// $ git pull origin master                    # 将远程仓库里面的项目拉下来
-// $ dir                                                # 查看有哪些文件夹
-// $ git rm -r --cached target              # 删除target文件夹
-// $ git commit -m '删除了target'        # 提交,添加操作说明
-// $ git push -u origin master               # 将本次更改更新到github项目上去

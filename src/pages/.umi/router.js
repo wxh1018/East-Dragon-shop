@@ -18,6 +18,11 @@ const routes = [
         component: require('../login/index.js').default,
       },
       {
+        path: '/models/editpro',
+        exact: true,
+        component: require('../models/editpro.js').default,
+      },
+      {
         path: '/models/home',
         exact: true,
         component: require('../models/home.js').default,
@@ -57,6 +62,11 @@ const routes = [
         exact: false,
         component: require('../index/_layout.js').default,
         routes: [
+          {
+            path: '/index/editProduct/:id',
+            exact: true,
+            component: require('../index/editProduct/$id.js').default,
+          },
           {
             path: '/index/home',
             exact: true,

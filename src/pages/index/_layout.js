@@ -39,10 +39,7 @@ function index(props) {
                   <span className="nav-text">系统首页</span>
                 </Link>
               </Menu.Item>
-              <Menu.Item key="2"><Link to="/index/transaction">
-                <Icon type="video-camera" />
-                <span className="nav-text">交易管理</span></Link>
-              </Menu.Item>
+             
               <Menu.Item key="3"><Link to="/index/product">
                 <Icon type="upload" />
                 <span className="nav-text"
@@ -51,37 +48,40 @@ function index(props) {
                 })}
                 >商品管理</span></Link>
               </Menu.Item>
+              <Menu.Item key="2"><Link to="/index/transaction">
+                {/* <Icon type="video-camera" /> */}
+                <span className="nav-text"></span></Link>
+              </Menu.Item>
               <Menu.Item key="4">
-                <Icon type="bar-chart" />
-                <span className="nav-text"> 4</span>
+                {/* <Icon type="bar-chart" /> */}
+                <span className="nav-text"></span>
               </Menu.Item>
               <Menu.Item key="5">
-                <Icon type="cloud-o" />
-                <span className="nav-text">nav 5</span>
+                {/* <Icon type="cloud-o" /> */}
+                <span className="nav-text"></span>
               </Menu.Item>
               <Menu.Item key="6">
-                <Icon type="appstore-o" />
-                <span className="nav-text">nav 6</span>
+                {/* <Icon type="appstore-o" /> */}
+                <span className="nav-text"></span>
               </Menu.Item>
               <Menu.Item key="7">
-                <Icon type="team" />
-                <span className="nav-text">nav 7</span>
+                {/* <Icon type="team" /> */}
+                <span className="nav-text"></span>
               </Menu.Item>
               <Menu.Item key="8">
-                <Icon type="shop" />
-                <span className="nav-text">nav 8</span>
+                {/* <Icon type="shop" /> */}
+                <span className="nav-text"></span>
               </Menu.Item>
               <Menu.Item key="9">
-                <Icon type="shop" />
-                <span className="nav-text">nav 8</span>
+                {/* <Icon type="shop" /> */}
+                <span className="nav-text"></span>
               </Menu.Item>
               <Menu.Item key="10">
-                <Icon type="shop" />
-                <span className="nav-text">nav 8</span>
+                <span className="nav-text"></span>
               </Menu.Item>
               <Menu.Item key="11">
-                <Icon type="shop" />
-                <span className="nav-text">nav 8</span>
+                {/* <Icon type="shop" /> */}
+                <span className="nav-text"></span>
               </Menu.Item>
               <Menu.Item key="12">
                 {/* <Icon type="shop" /> */}
